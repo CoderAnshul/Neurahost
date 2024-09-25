@@ -1,21 +1,10 @@
 const textElement = document.getElementById('text');
 
-        // if (textElement) {
-        //     const words = textElement.innerHTML.split(' ');
-
-        //     const wrappedWords = words.map(word => `<span>${word}</span>`).join(' ');
-
-        //     textElement.innerHTML = wrappedWords;
-        // }
 
 
-const tl = gsap.timeline();
+var tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from(textElement,{
-//     opacity:0,
-//     duration:1,
-// })
 
 const navElements = document.querySelectorAll('#navbar img, #navbar .navButtons button');
 
@@ -48,7 +37,7 @@ tl.from(".landingPageLeft p",{
 
 const box = document.querySelector('.decorBoxOne');
 
-const tl2 = gsap.timeline();
+var tl2 = gsap.timeline();
 
 
 tl2.from(".landingPageRight",{
@@ -75,7 +64,7 @@ gsap.from(".featBox",{
         trigger:".featBox",
         // markers:true,
         start:"top 100%",
-        // end:"top 70%"
+        end:"top 80%"
     }
 })
 gsap.from(".mentorLeft",{
@@ -86,7 +75,8 @@ gsap.from(".mentorLeft",{
     scrollTrigger:{
         trigger:".mentorLeft",
         // markers:true,
-        start:"top 70%"
+        start:"top 70%",
+        end:"top 50%"
     }
 })
 gsap.from(".mentorRight",{
@@ -97,7 +87,8 @@ gsap.from(".mentorRight",{
     scrollTrigger:{
         trigger:".mentorRight",
         // markers:true,
-        start:"top 70%"
+        start:"top 70%",
+        end:"top 50%"
     }
 })
 
@@ -286,3 +277,7 @@ gsap.from(".footerBottom img",{
 
     observer.observe(document.querySelector('.metrics'));
 
+
+
+
+    
